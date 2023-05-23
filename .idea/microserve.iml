@@ -116,6 +116,8 @@
       <excludeFolder url="file://$MODULE_DIR$/order_service/vendor/symfony/polyfill-intl-grapheme" />
       <excludeFolder url="file://$MODULE_DIR$/order_service/vendor/symfony/polyfill-php80" />
       <excludeFolder url="file://$MODULE_DIR$/order_service/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/order_service/storage/app" />
+      <excludeFolder url="file://$MODULE_DIR$/order_service/storage/framework" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

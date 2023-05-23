@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +14,10 @@ use App\Http\Controllers\OrderController;
 |
 */
 
-
+use App\Http\Controllers\OrderController;
 
 Route::prefix('/v1')->group(function () {
     Route::post('/orders', [OrderController::class, 'store']);
     Route::get('/order/{order}', [OrderController::class, 'show']);
 });
+

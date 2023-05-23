@@ -14,7 +14,7 @@ class OrderTest extends TestCase
 {
 
     $order = Order::create([
-        'product_id' => fake()->numberBetween(1, 2),
+        'product_id' =>1,
     ]);
 
     $payload = [
@@ -30,10 +30,11 @@ class OrderTest extends TestCase
 }
 
     /**
-     * A feature test to get active order data based on order ID     *     * @return void
+     * A feature test to get active order data based on order ID
+     *  * @return void
      */    public function test_get_order_by_id(): void
 {
-    $order_id = Order::get()->random()->id;
+    $order_id = Order::all()->random()->getAttribute('id');
     $this->get('/api/v1/order/' . $order_id)
         ->assertStatus(200)
         ->assertJsonStructure(

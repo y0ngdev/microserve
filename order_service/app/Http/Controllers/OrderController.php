@@ -28,7 +28,11 @@ class OrderController extends Controller
      * Display the specified Order.     */
     public function show(Order $order)
     {
-        $product = Http::get('http://localhost:8080/items/' . $order->product_id)->json();
+
+
+        $product = Http::get('http://127.0.0.1:8000/api/v1/items/' . $order->product_id)->json();
+
+
         $response =[[
             'id' => $order->id,
             'product' => [

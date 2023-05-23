@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +13,7 @@ use App\Http\Controllers\ProductController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\ProductController;
 
 Route::prefix('/v1')->group(function () {
     Route::get('/items', [ProductController::class, 'index']);
@@ -22,4 +22,3 @@ Route::prefix('/v1')->group(function () {
     Route::put('/items/{product:id}', [ProductController::class, 'update']);
     Route::delete('/items/{product:id}', [ProductController::class, 'destroy']);
 });
-
